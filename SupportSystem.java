@@ -39,7 +39,8 @@ public class SupportSystem
         while(!finished) {
             String input = reader.getInput();
             input = input.trim();//8
-            if(input.startsWith("bye")) {
+            input = input.toLowerCase(); //9
+            if(input.equals("bye")) { //11
                 finished = true;
             }
             else {
@@ -77,6 +78,10 @@ public class SupportSystem
  * 4. Yes, it is public boolean endsWith(String Suffix)
  * 5. public int length() 
  * 6. it is not hard but not easy because you have to scroll till you find the method that fits the description
- * 7.
- * 8.
+ * 7. Public String trim(); ex: public String trim(String text)
+ * 8. input = input.trim();
+ * 9. input = input.toLowerCase();
+ * 11.if(input.equals("bye"))
+ * 13.
+ * 14.
  */
