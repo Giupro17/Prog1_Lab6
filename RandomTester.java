@@ -25,7 +25,7 @@ public class RandomTester
 
     }
     
-    private void fillResponses(){ //22
+    private void fillResponses(){   //22
         responses.add("yes");
         responses.add("no");
         responses.add("maybe");
