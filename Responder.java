@@ -13,6 +13,7 @@ public class Responder
 {
     private ArrayList<String> responses; //22
     private Random rand_gen;
+    private HashMap<String,String> responseMap;
     /**
      * Construct a Responder - nothing to do
      */
@@ -20,19 +21,31 @@ public class Responder
     {
         rand_gen = new Random(); 
         responses = new ArrayList<>();
-        
+        responseMap = new HashMap<>();
+        fillResponsesMap();
         fillResponses();
         
     }
+    private void fillResponsesMap(){
+        responseMap.put("crash","try to reboot your computer");
 
+    }
+    
+    private String pickDefaultResponse(){
+        return "No idea, sorry";
+        
+    }
     /**
      * Generate a response.
      * @return   A string that should be displayed as the response
      */
-    public String generateResponse()
+    public String generateResponse(String word)
     {
-        int index = rand_gen.nextInt(responses.size());
-        return responses.get(index);
+        String response = responseMap.get(word);
+        if (response == null){
+            response = pickDefaultResponse();
+        }
+        return response;
     }
     
      private void fillResponses(){
