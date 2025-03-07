@@ -38,8 +38,7 @@ public class MapTester
         String number = contact.get(name);
         return number;
     }
-        
-    }
+}
 
 /*
  * 24. HashMap is implementing the method interface. Its used for to provide null
