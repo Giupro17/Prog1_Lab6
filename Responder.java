@@ -1,5 +1,7 @@
 import java.util.Random;
 import java.util.ArrayList;
+import java.util.HashMap;
+
 /**
  * The responder class represents a response generator object.
  * It is used to generate an automatic response to an input string.
@@ -11,7 +13,6 @@ public class Responder
 {
     private ArrayList<String> responses; //22
     private Random rand_gen;
-    
     /**
      * Construct a Responder - nothing to do
      */
@@ -19,7 +20,9 @@ public class Responder
     {
         rand_gen = new Random(); 
         responses = new ArrayList<>();
+        
         fillResponses();
+        
     }
 
     /**
@@ -31,13 +34,13 @@ public class Responder
         int index = rand_gen.nextInt(responses.size());
         return responses.get(index);
     }
-        
-    private void fillResponses(){
+    
+     private void fillResponses(){
         responses.add("yes");
         responses.add("no");
         responses.add("maybe");
         responses.add("Ill ask my mom");
         responses.add("I don't know");
         responses.add("We'll see");
-}
+    }
 }
