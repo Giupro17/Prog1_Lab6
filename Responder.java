@@ -17,6 +17,7 @@ public class Responder
      */
     public Responder()
     {
+        rand_gen = new Random(); 
         responses = new ArrayList<>();
         fillResponses();
     }
@@ -27,7 +28,8 @@ public class Responder
      */
     public String generateResponse()
     {
-        return "That sounds interesting. Tell me more...";
+        int index = rand_gen.nextInt(responses.size());
+        return responses.get(index);
     }
         
     private void fillResponses(){
