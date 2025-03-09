@@ -26,11 +26,18 @@ public class InputReader
      *
      * @return  A String typed by the user.
      */
-    public String getInput()
+    public HashSet<String> getInput() //39
     {
-        System.out.print("> ");         // print prompt
-        String inputLine = reader.nextLine();
+        System.out.print("> ");
+        String inputLine = reader.nextLine().trim().toLowerCase();
+        String[] wordArray = inputLine.split(" ");
+        HashSet<String> words = new HashSet<String>();
+        for(String word : wordArray) {
+            words.add(word);
+        }
 
-        return inputLine;
+        return words;
     }
 }
+//39.  The for-each loop is more explicit and easier to understand. the Array.asList() method is shorter
+// but it doesnt allow modifications to the resulting list directly.
