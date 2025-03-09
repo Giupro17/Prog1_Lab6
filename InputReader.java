@@ -41,3 +41,4 @@ public class InputReader
 }
 //39.  The for-each loop is more explicit and easier to understand. the Array.asList() method is shorter
 // but it doesnt allow modifications to the resulting list directly.
+// 40. Sorting, searching,comparison, filling, conversion
